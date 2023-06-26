@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # Importing libraries
-
-# In[1]:
-
-
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 from sklearn.linear_model import LinearRegression # linear regression
@@ -13,25 +5,17 @@ import matplotlib.pyplot as plt # Plotting graphs
 import seaborn as sns
 
 
-# # Information on the csv file
-
-# In[2]:
-
-
+#Information on the csv file
 csv = pd.read_csv("../input/economic-data-9-countries-19802020/Economic Data - 9 Countries (1980-2020).csv")
 
 
-# **Finding number of null values per column**
-
-# In[3]:
+#Finding number of null values per column
 
 
 csv.info()
 
 
-# **Replacing the Missing Values in the columns**
-
-# In[4]:
+#Replacing the Missing Values in the columns
 
 
 # Replacing index prices with mean values
