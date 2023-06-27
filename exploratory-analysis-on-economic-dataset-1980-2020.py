@@ -43,42 +43,22 @@ csv['manufacturingoutput'] = csv['manufacturingoutput'].fillna(csv['manufacturin
 csv['tradebalance'] = csv['tradebalance'].fillna(csv['tradebalance'].mean())
 
 
-# In[5]:
-
-
 # Checking if all values are filled
 csv.info()
 
 
 # Value distributions of the dataset
-
-# In[6]:
-
-
 csv.hist(figsize=(30, 40), bins=30)
 
 
-# # Correlation Matrix and Heat Map
-
-# In[7]:
-
-
+#Correlation Matrix and Heat Map
 corr = csv.corr('pearson')
-
-
-# In[8]:
-
-
 plt.figure(figsize = (15,15))
 sns.heatmap(corr, vmax=1.0, vmin=-1.0, square=True, annot=True, annot_kws={"size": 9, "color": "black"}, 
             linewidths=0.1, cmap='rocket')
 
 
-# **Correlations with Index Prices**
-
-# In[9]:
-
-
+#Correlations with Index Prices
 corr1 = corr['log_indexprice'].drop(['log_indexprice'])
 corr1.sort_values(ascending=False)
 
