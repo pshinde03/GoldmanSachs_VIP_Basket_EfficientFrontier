@@ -63,10 +63,7 @@ corr1 = corr['log_indexprice'].drop(['log_indexprice'])
 corr1.sort_values(ascending=False)
 
 
-# **Regression Plots as per strengths of correlation with index prices**
-
-# In[10]:
-
+#Regression Plots as per strengths of correlation with index prices
 
 # Identifying the strong correlated features (corr > 0.6)
 strong_corr = corr1[abs(corr1) >= 0.6].sort_values(ascending=False).index.tolist()
@@ -82,11 +79,7 @@ for i, ax in enumerate(ax):
     if i < len(strong_corr):
         sns.regplot(x=strong_corr[i], y='log_indexprice', data=strong_fet, ax=ax, line_kws={'color': 'red'})
 
-
-# In[11]:
-
-
-# moderate correlation features ( > 0.35 & < 0.6)
+# Moderate correlation features ( > 0.35 & < 0.6)
 
 moderate_corr = corr1[(abs(corr1) >= 0.35) & (abs(corr1) < 0.6)].sort_values(ascending=False).index.tolist()
 print('\n Moderate correlation features: ', moderate_corr, '\n')
@@ -98,9 +91,6 @@ fig, ax = plt.subplots(2, 2, figsize=(30, 30))
 for i, ax in enumerate(fig.axes):
     if i < len(moderate_corr):
         sns.regplot(x=moderate_corr[i], y='log_indexprice', data=moderate_fet, ax=ax, line_kws={'color': 'red'})
-
-
-# In[12]:
 
 
 weak_corr = corr1[(abs(corr1) < 0.35)].sort_values(ascending=False).index.tolist()
@@ -116,8 +106,6 @@ for i, ax in enumerate(fig.axes):
 
 
 # # Linear Regression
-
-# In[13]:
 
 
 # Providing data in terms of array
@@ -140,9 +128,6 @@ print(f"slope: {reg.coef_}")
 
 
 # # Multivariate Distributions: Pairplot
-
-# In[14]:
-
 
 sns.set(style="ticks", color_codes=True)
 sns.pairplot(data = csv, hue = 'stock index')
