@@ -4,7 +4,7 @@ The stock market is a dynamic environment with dramatic changes that provide inv
 
 The purpose of this project is:
 
-“Impact of inflation on stock market indices using from 1980 through 2020”
+“Impact of inflation on stock market indices using data from 1980 through 2020”
 
 Although preliminary data analysis and interpretation were carried out using python a detailed statistical analysis was performed using STATA.
 
