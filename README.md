@@ -11,3 +11,4 @@ The findings in the pdf are from a model in STATA and the following conclusion i
 # The final Equation
 
 $$IndexPrice_{index, year}\\ = 3.8 - 5.15*InflationRate_{index, year} + 3.8$$
+#### This simply suggests that a 1% rise in inflation would bring down the price of a stock index by 5.15% for a similar time period.
